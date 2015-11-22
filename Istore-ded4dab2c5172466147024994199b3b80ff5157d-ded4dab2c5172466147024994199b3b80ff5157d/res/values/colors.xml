@@ -1,8 +1,0 @@
-<resources>
-
-    <color name="black_overlay">#66000000</color>
-    <color name="progress_default_circle_color">#80ffffff</color>
-    <color name="progress_default_progress_color">#33b5e5</color>
-    <color name="action_bar_background">#E26033</color>
-
-</resources>

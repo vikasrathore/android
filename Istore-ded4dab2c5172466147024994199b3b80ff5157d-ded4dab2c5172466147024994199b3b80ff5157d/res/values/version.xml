@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
-  Copyright (C) 2014 Cyanogen, Inc.
-  -->
-<resources>
-    <integer name="cyanogen_ambient_version">2</integer>
-</resources>
