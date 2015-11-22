@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    >
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="5dp"
+        >
+
+<RelativeLayout
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:id="@+id/newsItemTopLayout"  android:padding="16dp"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/news_headline"
+        android:textStyle="bold"
+        android:layout_alignParentLeft="true"
+        android:textColor="@android:color/black"
+        android:text="Congress and White House Reach Tentative Budget Deal"
+        android:textSize="20sp"
+        android:layout_toLeftOf="@+id/news_thumb"
+        android:layout_toStartOf="@+id/news_thumb" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/news_short_desc"
+        android:layout_below="@+id/news_headline"
+        android:text="Republican leaders and President Obama tentatively settled what is likely to be their last budgetary fight, agreeing to increase spending modestly and raise the borrowing limit."
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:layout_toLeftOf="@+id/news_thumb"
+        android:layout_toStartOf="@+id/news_thumb"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/news_thumb"
+
+        android:layout_alignParentRight="true"
+        android:src="@drawable/thumb"
+        />
+</RelativeLayout>
+
+
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>

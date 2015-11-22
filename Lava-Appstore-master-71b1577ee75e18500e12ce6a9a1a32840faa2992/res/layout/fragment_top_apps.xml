@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/bannerAppImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:id="@+id/app_info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#99000000"
+        android:minHeight="70dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:visibility="gone" >
+
+        <!-- app icon, name and dev info -->
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/app_row_bottom_padding"
+            android:paddingLeft="@dimen/app_row_left_padding"
+            android:paddingRight="@dimen/app_row_right_padding"
+            android:paddingTop="@dimen/app_row_top_padding" >
+
+            <ImageView
+                android:id="@+id/info_app_image"
+                android:layout_width="@dimen/app_info_icon_size"
+                android:layout_height="@dimen/app_info_icon_size"
+                android:layout_alignParentLeft="true" />
+
+            <TextView
+                android:id="@+id/info_app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/info_app_image"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/info_app_image"
+                android:maxLines="1"
+                android:textColor="@color/textcolor" />
+
+            <TextView
+                android:id="@+id/info_app_dev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/info_app_name"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/info_app_image"
+                android:maxLines="1"
+                android:textColor="@color/textcolor" />
+
+            <RatingBar
+                android:id="@+id/info_app_rating"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/info_app_dev"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/info_app_image" />
+        </RelativeLayout>
+
+        <!-- description video download icons -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="3" >
+
+            <TextView
+                android:id="@+id/description_text"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/icon_banner_description"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:paddingTop="@dimen/app_info_text_padding_top"
+                android:text="@string/description"
+                android:textColor="@color/textcolor"
+                android:textSize="@dimen/app_info_text_size" />
+
+            <TextView
+                android:id="@+id/video_text"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/video_banner_icon_selector"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:paddingTop="@dimen/app_info_text_padding_top"
+                android:text="@string/video"
+                android:textColor="@color/textcolor"
+                android:textSize="@dimen/app_info_text_size" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/download_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableTop="@drawable/icon_banner_download"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/app_info_text_padding_top"
+                    android:text="@string/download"
+                    android:textColor="@color/textcolor"
+                    android:textSize="@dimen/app_info_text_size" />
+
+                <com.cube26.trendingapps.ui.ProgressButton
+                    android:id="@+id/app_download_circular_progress"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/download_icon"
+                    android:paddingRight="10dp"
+                    android:visibility="gone" />
+
+                <com.cube26.trendingapps.ui.CircularProgressBar
+                    android:id="@+id/app_download_progressBar"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="15dp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

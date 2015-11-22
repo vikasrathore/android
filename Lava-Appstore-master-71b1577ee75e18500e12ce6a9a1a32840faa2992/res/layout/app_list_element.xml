@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEFEF"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/app_row_top_padding"
+    android:weightSum="3" >
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+       
+        android:paddingBottom="@dimen/app_row_bottom_padding"
+        android:paddingLeft="@dimen/app_row_left_padding"
+        android:paddingRight="@dimen/app_row_right_padding"
+        android:paddingTop="@dimen/app_row_top_padding" >
+
+        <ImageView
+            android:id="@+id/app_image"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/app_image"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/app_image"
+         	android:textStyle="bold"
+            android:maxLines="1" />
+
+        <TextView
+            android:id="@+id/app_dev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/app_name"
+            android:layout_marginLeft="5dp"
+            android:textStyle="italic"
+            android:layout_toRightOf="@+id/app_image"
+            android:maxLines="1" />
+
+        <RatingBar
+            android:id="@+id/app_rating"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/app_dev"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/app_image"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:weightSum="2" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2" 
+            android:visibility="gone">
+
+            <ImageButton
+                android:id="@+id/description_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:src="@drawable/icon_app_description" />
+
+            <ImageButton
+                android:id="@+id/video_btn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:src="@drawable/video_app_icon_selector" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:minWidth="80dp"
+            android:minHeight="80dp" >
+
+            <ImageView
+                android:id="@+id/app_action_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_download"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal" />
+
+            <com.cube26.trendingapps.ui.ProgressButton
+                android:id="@+id/app_download_circular_progress"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/download_icon"
+                android:paddingRight="10dp"
+                android:visibility="gone" />
+
+            <com.cube26.trendingapps.ui.CircularProgressBar
+                android:id="@+id/app_download_progressBar"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerInParent="true"
+                android:paddingRight="15dp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
